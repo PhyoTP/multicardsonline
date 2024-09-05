@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'AvenirMedium';
+    src: url('AvenirMedium.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AvenirDemi';
+    src: url('AvenirNextRoundedStd-Demi.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AvenirBold';
+    src: url('AvenirNextRoundedStd-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+a, h1, h2, .lighted{
+    color: white;
+}
+p, a , img, h3{
+    font-family: "AvenirMedium";
+}
+h2{
+    font-family:"AvenirDemi";
+}
+h1{
+    font-family: "AvenirBold";
+}
+body{
+    background-color: #3B2400;
+}
+p, img, h3{
+    color:white;
+}
+a{
+    text-decoration: none;
+}
+header{
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    background-color: #E4941B;
+    padding: 10px;
+    border-radius: 10px;
+    position: fixed;
+    width: 95vw;
+}
+.spacer{
+    flex-grow: 1;
+}
+
+/* From Uiverse.io by PhyoTP */ 
+.label-check {
+    display: none;
+}
+ 
+
+.hamburger-label {
+    border: none;
+    background-color: transparent;
+    position: relative;
+    top: 1vh;
+    width: 70px;
+    height: 58px;
+    display: block;
+    cursor: pointer;
+    transition: 0.3s;
+}
+ 
+.hamburger-label div {
+    width: 70px;
+    height: 6px;
+    background-color: #fff;
+    position: absolute;
+}
+ 
+.line1 {
+    transition: all 0.3s;
+}
+  
+.line2 {
+    margin: 18px 0 0 0;
+    transition: 0.3s;
+}
+  
+.line3 {
+    margin: 36px 0 0 0;
+    transition: 0.3s;
+}
+  
+#label-check:checked + .hamburger-label .line1 {
+    transform: rotate(35deg) scaleX(0.55) translate(39px, -4.5px);
+    border-radius: 50px 50px 50px 0;
+}
+  
+#label-check:checked + .hamburger-label .line3 {
+    transform: rotate(-35deg) scaleX(0.55) translate(39px, 4.5px);
+    border-radius: 0 50px 50px 50px;
+}
+  
+#label-check:checked + .hamburger-label .line2 {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    width: 45px;
+}
+#label-check:checked + .hamburger-label {
+    transform: rotate(90deg);
+    position: relative;
+    top: 0;
+}
+nav{
+    float: right;
+    position: relative;
+    top: 12.5vh;
+    padding:1vmin;
+    padding-left: 3vmin;
+    padding-right: 3vmin;
+    background-color: #E4941B;
+    border-radius: 5px;
+}
