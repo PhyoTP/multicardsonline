@@ -10,9 +10,11 @@ const Layout = () => {
   const Sidebar = () => {
     if (checked) {
       return (
-        <nav>
+        <div style={{display: "flex", flexDirection: "column"}}>
+        <nav style={{flexGrow: 1}}>
           <Link to="/">Home</Link>
         </nav>
+        </div>
       )
     }else {
       return null
@@ -21,9 +23,7 @@ const Layout = () => {
   return (
     <>
     <header>
-      <h1 style={{display: "inline"}}>Multicards Online</h1>
-      <span class="spacer"></span>
-      <div class="container">
+    <div class="container">
         <input type="checkbox" id="label-check" class="label-check" 
           checked={checked}
           onChange={handleChange}
@@ -34,6 +34,8 @@ const Layout = () => {
           <div class="line3"></div>  
         </label>  
       </div>
+      <h1 style={{display: "inline"}}>Multicards Online</h1>
+      <span class="spacer"></span>
     </header>
     
     <Sidebar />

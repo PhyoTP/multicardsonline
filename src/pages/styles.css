@@ -16,10 +16,10 @@
     font-weight: normal;
     font-style: normal;
 }
-a, h1, h2, .lighted{
+html, a{
     color: white;
 }
-p, a , img, h3{
+html, a{
     font-family: "AvenirMedium";
 }
 h2{
@@ -31,9 +31,7 @@ h1{
 body{
     background-color: #3B2400;
 }
-p, img, h3{
-    color:white;
-}
+
 a{
     text-decoration: none;
 }
@@ -59,7 +57,7 @@ header{
 
 .hamburger-label {
     border: none;
-    background-color: transparent;
+    background-color: #E4941B;
     position: relative;
     top: 1vh;
     width: 70px;
@@ -67,6 +65,7 @@ header{
     display: block;
     cursor: pointer;
     transition: 0.3s;
+    border-radius: 20px;
 }
  
 .hamburger-label div {
@@ -109,14 +108,26 @@ header{
     transform: rotate(90deg);
     position: relative;
     top: 0;
+    right: 0.5vw;
 }
 nav{
-    float: right;
-    position: relative;
-    top: 12.5vh;
+    position: fixed;
+    top: 13vh;
     padding:1vmin;
     padding-left: 3vmin;
     padding-right: 3vmin;
     background-color: #E4941B;
-    border-radius: 5px;
+    border-radius: 10px;
 }
+.stuff {
+    background-color: #E4941B;
+    border-radius: 10px;
+    padding:1vmin;
+    padding-left: 3vmin;
+    padding-right: 3vmin;
+    text-decoration: none;  /* To remove the underline */
+    color: white;  /* Change text color */
+    display: block;  /* Ensures padding and background apply */
+    margin: 3vh;
+    text-align: center;
+  }
