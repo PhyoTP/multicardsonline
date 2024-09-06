@@ -20,13 +20,13 @@ html, a{
     color: white;
 }
 html, a{
-    font-family: "AvenirMedium";
+    font-family: AvenirMedium;
 }
 h2{
-    font-family:"AvenirDemi";
+    font-family:AvenirDemi;
 }
 h1{
-    font-family: "AvenirBold";
+    font-family: AvenirBold;
 }
 body{
     background-color: #3B2400;

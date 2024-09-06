@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import useFetch from "./useFetch";
+import Loader from "./Loader";
 
 const SetPage = () => {
   // Extract the 'id' from the URL parameters
@@ -9,7 +10,7 @@ const SetPage = () => {
 
   // Handle loading and error states
   if (loading) {
-    return <h2>Loading...</h2>;
+    return <Loader />;
   }
 
   if (error) {
