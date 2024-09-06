@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/multicardsonline/static/css/main.cc4da350.css",
+    "main.js": "/multicardsonline/static/js/main.0693fd34.js",
+    "static/media/AvenirMedium.ttf": "/multicardsonline/static/media/AvenirMedium.cf855ff7fd09767d5633.ttf",
+    "static/media/AvenirNextRoundedStd-Bold.woff2": "/multicardsonline/static/media/AvenirNextRoundedStd-Bold.efac21793c94ba7ef71c.woff2",
+    "static/media/AvenirNextRoundedStd-Demi.woff2": "/multicardsonline/static/media/AvenirNextRoundedStd-Demi.7c68ce948afc00ab710c.woff2",
+    "index.html": "/multicardsonline/index.html",
+    "main.cc4da350.css.map": "/multicardsonline/static/css/main.cc4da350.css.map",
+    "main.0693fd34.js.map": "/multicardsonline/static/js/main.0693fd34.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cc4da350.css",
+    "static/js/main.0693fd34.js"
+  ]
+}
