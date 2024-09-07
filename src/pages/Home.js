@@ -2,9 +2,12 @@ import useFetch from "./useFetch";
 import { Link } from "react-router-dom";
 import Loader from "./Loader";
 import Error from "./Error";
+import Search from "./Search";
+import { useState } from "react";
 
 const Home = () => {
   const { data, loading, error } = useFetch("https://phyotp.pythonanywhere.com/api/multicards/sets");
+  const [ query, searchNew ] = useState("");
 
   if (loading) {
     return <Loader />;
@@ -14,11 +17,16 @@ const Home = () => {
     return <Error error={error} />;
   }
 
+  const filteredData = data.filter((item) =>
+    item.name.toLowerCase().includes(query.toLowerCase()) || 
+    item.creator.toLowerCase().includes(query.toLowerCase())
+  );
   return (
     <>
       <h2>Home</h2>
+      <Search query={query} onSearch={searchNew} />
       {data && 
-        data.map((item) => (
+        filteredData.map((item) => (
           <Link to={`/set/${item.id}`} key={item.id} className="stuff">
             <h3>{item.name}</h3>
             <p>By {item.creator}</p>
