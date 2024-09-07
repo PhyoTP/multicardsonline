@@ -4,7 +4,7 @@ import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import NoPage from "./pages/NoPage";
 import SetPage from "./pages/SetPage";
-
+import PlayPage from "./pages/PlayPage";
 export default function App() {
   return (
     <Router>
@@ -12,6 +12,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="set/:id" element={<SetPage />} />
+          <Route path="set/:id/play" element={<PlayPage />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

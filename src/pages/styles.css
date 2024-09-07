@@ -131,3 +131,7 @@ nav{
     margin: 3vh;
     text-align: center;
   }
+td {
+    text-align: center;
+    border: 1px solid white;
+}

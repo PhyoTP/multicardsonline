@@ -2,6 +2,8 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import useFetch from "./useFetch";
 import Loader from "./Loader";
+import Error from "./Error";
+import PlayButton from "./PlayButton";
 
 const SetPage = () => {
   // Extract the 'id' from the URL parameters
@@ -14,7 +16,7 @@ const SetPage = () => {
   }
 
   if (error) {
-    return <h2>Error: {error}</h2>;
+    return <Error error={error} />;
   }
 
   // Safely handle cards data
@@ -24,10 +26,10 @@ const SetPage = () => {
     <div>
       {data && (
         <div>
-          <div key={data.id}>
+          <div key={data.id} className="stuff">
             <h3>{data.name || "No name provided"}</h3>
             <p>By {data.creator || "Unknown creator"}</p>
-            <p>Public: {data.isPublic ? "Yes" : "No"}</p>
+            <PlayButton id={data.id}/>
           </div>
           <table className="stuff">
             <thead>
