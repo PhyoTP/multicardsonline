@@ -34,7 +34,7 @@ const Layout = () => {
           <div class="line3"></div>  
         </label>  
       </div>
-      <h1 style={{display: "inline"}}>Multicards Online</h1>
+      <h1 style={{display: "inline"}}>Multicards</h1>
       <span class="spacer"></span>
     </header>
     

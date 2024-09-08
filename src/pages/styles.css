@@ -58,10 +58,8 @@ header{
 .hamburger-label {
     border: none;
     background-color: #E4941B;
-    position: relative;
-    top: 1vh;
-    width: 70px;
-    height: 58px;
+    width: 5vw;
+    height: 5vh;
     display: block;
     cursor: pointer;
     transition: 0.3s;
@@ -69,8 +67,8 @@ header{
 }
  
 .hamburger-label div {
-    width: 70px;
-    height: 6px;
+    width: 5vw;
+    height: 1vh;
     background-color: #fff;
     position: absolute;
 }
@@ -80,29 +78,29 @@ header{
 }
   
 .line2 {
-    margin: 18px 0 0 0;
+    margin: 2vmin 0 0 0;
     transition: 0.3s;
 }
   
 .line3 {
-    margin: 36px 0 0 0;
+    margin: 4vmin 0 0 0;
     transition: 0.3s;
 }
   
 #label-check:checked + .hamburger-label .line1 {
-    transform: rotate(35deg) scaleX(0.55) translate(39px, -4.5px);
+    transform: rotate(35deg) scaleX(0.55) translate(3.9vmin, -4.5px);
     border-radius: 50px 50px 50px 0;
 }
   
 #label-check:checked + .hamburger-label .line3 {
-    transform: rotate(-35deg) scaleX(0.55) translate(39px, 4.5px);
+    transform: rotate(-35deg) scaleX(0.55) translate(3.9vmin, 4.5px);
     border-radius: 0 50px 50px 50px;
 }
   
 #label-check:checked + .hamburger-label .line2 {
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
-    width: 45px;
+    width: 4.5vw;
 }
 #label-check:checked + .hamburger-label {
     transform: rotate(90deg);
@@ -112,7 +110,7 @@ header{
 }
 nav{
     position: fixed;
-    top: 13vh;
+    top: 15vh;
     padding:1vmin;
     padding-left: 3vmin;
     padding-right: 3vmin;
