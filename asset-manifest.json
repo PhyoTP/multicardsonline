@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/multicardsonline/static/css/main.cc4da350.css",
-    "main.js": "/multicardsonline/static/js/main.c939fcd8.js",
-    "static/media/AvenirMedium.ttf": "/multicardsonline/static/media/AvenirMedium.cf855ff7fd09767d5633.ttf",
-    "static/media/AvenirNextRoundedStd-Bold.woff2": "/multicardsonline/static/media/AvenirNextRoundedStd-Bold.efac21793c94ba7ef71c.woff2",
-    "static/media/AvenirNextRoundedStd-Demi.woff2": "/multicardsonline/static/media/AvenirNextRoundedStd-Demi.7c68ce948afc00ab710c.woff2",
-    "index.html": "/multicardsonline/index.html",
-    "main.cc4da350.css.map": "/multicardsonline/static/css/main.cc4da350.css.map",
-    "main.c939fcd8.js.map": "/multicardsonline/static/js/main.c939fcd8.js.map"
+    "main.css": "/static/css/main.a084994f.css",
+    "main.js": "/static/js/main.9d6ec901.js",
+    "static/media/AvenirMedium.ttf": "/static/media/AvenirMedium.cf855ff7fd09767d5633.ttf",
+    "static/media/AvenirNextRoundedStd-Bold.woff2": "/static/media/AvenirNextRoundedStd-Bold.efac21793c94ba7ef71c.woff2",
+    "static/media/AvenirNextRoundedStd-Demi.woff2": "/static/media/AvenirNextRoundedStd-Demi.7c68ce948afc00ab710c.woff2",
+    "index.html": "/index.html",
+    "main.a084994f.css.map": "/static/css/main.a084994f.css.map",
+    "main.9d6ec901.js.map": "/static/js/main.9d6ec901.js.map"
   },
   "entrypoints": [
-    "static/css/main.cc4da350.css",
-    "static/js/main.c939fcd8.js"
+    "static/css/main.a084994f.css",
+    "static/js/main.9d6ec901.js"
   ]
 }
