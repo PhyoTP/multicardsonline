@@ -1,9 +1,10 @@
 import { Outlet, Link } from "react-router-dom";
 import "./styles.css";
-import { useState } from "react";
+//import { useState } from "react";
+import {ReactComponent as Icon} from "./icon.svg";
 
 const Layout = () => {
-  const [checked, setChecked] = useState(false);
+  /*const [checked, setChecked] = useState(false);
   const handleChange = () => {
     setChecked(!checked);
   };
@@ -19,11 +20,11 @@ const Layout = () => {
     }else {
       return null
     }
-  }
+  }*/
   return (
     <>
     <header>
-    <div class="container">
+      {/*<div class="container">
         <input type="checkbox" id="label-check" class="label-check" 
           checked={checked}
           onChange={handleChange}
@@ -33,12 +34,15 @@ const Layout = () => {
           <div class="line2"></div>
           <div class="line3"></div>  
         </label>  
-      </div>
-      <h1 style={{display: "inline"}}>Multicards</h1>
+      </div>*/}
+      <Link to="/">
+        <Icon id="icon"/>
+        <h1 style={{display: "inline"}}>Multicards</h1>
+      </Link>
       <span class="spacer"></span>
     </header>
     
-    <Sidebar />
+    {/*<Sidebar />*/}
     <div style={{height: "15vh"}}></div>
     <Outlet />
     </>

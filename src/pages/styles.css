@@ -34,6 +34,8 @@ body{
 
 a{
     text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 header{
     display: flex;
@@ -49,7 +51,7 @@ header{
     flex-grow: 1;
 }
 
-/* From Uiverse.io by PhyoTP */ 
+/* From Uiverse.io by PhyoTP 
 .label-check {
     display: none;
 }
@@ -107,7 +109,7 @@ header{
     position: relative;
     top: 0;
     right: 0.5vw;
-}
+}*/
 nav{
     position: fixed;
     top: 15vh;
@@ -132,4 +134,11 @@ nav{
 td {
     text-align: center;
     border: 1px solid white;
+}
+#icon{
+    height: 8vh;
+    width: 8vh;
+    border-radius: 10vh;
+    border: 5px solid #fff;
+    margin: 1rem;
 }

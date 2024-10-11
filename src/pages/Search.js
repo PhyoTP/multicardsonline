@@ -15,19 +15,22 @@ const Search = ({ query, onSearch }) => {
           onChange={(e) => onSearch(e.target.value)}
         />
       </div>
+      <div id="searchSpacer" />
     </StyledWrapper>
   );
 };
 
 const StyledWrapper = styled.div`
   .InputContainer {
-  width: 95vw;
+  position: absolute;
+  left: 4vmin;
+  right: 4vmin;
   height: 10vmin;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to bottom,rgb(227, 213, 255),rgb(255, 231, 231));
-  border-radius: 10vmin;
+  background: #E4941B;
+  border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
@@ -40,13 +43,15 @@ const StyledWrapper = styled.div`
   outline: none;
   caret-color: rgb(255, 81, 0);
   background-color: rgb(255, 255, 255);
-  border-radius: 10vmin;
+  border-radius: 10px;
   padding-left: 15px;
   letter-spacing: 0.8px;
   color: rgb(19, 19, 19);
   font-size: inherit;
 }
-
+#searchSpacer{
+  height: 10vmin;
+}
 `;
 
 export default Search;
