@@ -45,7 +45,10 @@ header{
     padding: 10px;
     border-radius: 10px;
     position: fixed;
-    width: 95vw;
+    left: 4vmin;
+    right: 4vmin;
+    border: 3px solid white;
+    z-index: 100;
 }
 .spacer{
     flex-grow: 1;
@@ -111,13 +114,21 @@ header{
     right: 0.5vw;
 }*/
 nav{
-    position: fixed;
-    top: 15vh;
-    padding:1vmin;
-    padding-left: 3vmin;
-    padding-right: 3vmin;
+    display: flex;
+    justify-content: space-evenly;
+    width:20vw;
+}
+nav a{
     background-color: #E4941B;
+    color: white;
+    padding: 0.5rem;
     border-radius: 10px;
+    border: 5px solid white;
+    transition: all 0.5s;
+}
+nav a:hover{
+    color: #E4941B;
+    background-color: white;
 }
 .stuff {
     background-color: #E4941B;
@@ -127,9 +138,11 @@ nav{
     padding-right: 3vmin;
     text-decoration: none;  /* To remove the underline */
     color: white;  /* Change text color */
-    display: block;  /* Ensures padding and background apply */
+    display: flex;  /* Ensures padding and background apply */
     margin: 3vh;
     text-align: center;
+    flex-direction: column;
+    align-items: center;
   }
 td {
     text-align: center;

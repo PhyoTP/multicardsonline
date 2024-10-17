@@ -2,6 +2,7 @@ import { Outlet, Link } from "react-router-dom";
 import "./styles.css";
 //import { useState } from "react";
 import {ReactComponent as Icon} from "./icon.svg";
+import { jwt } from "./PhyoID";
 
 const Layout = () => {
   /*const [checked, setChecked] = useState(false);
@@ -23,7 +24,7 @@ const Layout = () => {
   }*/
   return (
     <>
-    <header>
+    <header >
       {/*<div class="container">
         <input type="checkbox" id="label-check" class="label-check" 
           checked={checked}
@@ -40,6 +41,12 @@ const Layout = () => {
         <h1 style={{display: "inline"}}>Multicards</h1>
       </Link>
       <span class="spacer"></span>
+      {jwt==="" ? (
+        <nav>
+          <a href="https://auth.phyotp.dev/#/login/multicards">Login</a>
+          <a href="https://auth.phyotp.dev/#/register/multicards">Register</a>
+        </nav>
+      ) : (<div />)}
     </header>
     
     {/*<Sidebar />*/}
