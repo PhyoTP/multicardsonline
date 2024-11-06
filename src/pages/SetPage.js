@@ -8,7 +8,7 @@ import PlayButton from "./PlayButton";
 const SetPage = () => {
   // Extract the 'id' from the URL parameters
   const { id } = useParams();
-  const { data, loading, error } = useFetch(`https://phyotp.pythonanywhere.com/api/multicards/set/${id}`);
+  const { data, loading, error } = useFetch(`https://api.phyotp.dev/multicards/set/${id}`);
 
   // Handle loading and error states
   if (loading) {

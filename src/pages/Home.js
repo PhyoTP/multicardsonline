@@ -6,7 +6,7 @@ import Search from "./Search";
 import { useState } from "react";
 
 const Home = () => {
-  const { data, loading, error } = useFetch("https://phyotp.pythonanywhere.com/api/multicards/sets");
+  const { data, loading, error } = useFetch("https://api.phyotp.dev/multicards/sets");
   const [ query, searchNew ] = useState("");
 
   if (loading) {

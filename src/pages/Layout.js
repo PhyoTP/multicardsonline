@@ -40,7 +40,7 @@ const Layout = () => {
         <Icon id="icon"/>
         <h1 style={{display: "inline"}}>Multicards</h1>
       </Link>
-      <span class="spacer"></span>
+      <span className="spacer"></span>
       {jwt==="" ? (
         <nav>
           <a href="https://auth.phyotp.dev/#/login/multicards">Login</a>

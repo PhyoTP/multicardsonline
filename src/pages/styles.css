@@ -22,7 +22,7 @@ html, a{
 html, a{
     font-family: AvenirMedium;
 }
-h2{
+h2, select{
     font-family:AvenirDemi;
 }
 h1{
@@ -144,7 +144,7 @@ nav a:hover{
     flex-direction: column;
     align-items: center;
   }
-td {
+td, th {
     text-align: center;
     border: 1px solid white;
 }
@@ -153,5 +153,13 @@ td {
     width: 8vh;
     border-radius: 10vh;
     border: 5px solid #fff;
+    margin: 1rem;
+}
+select{
+    background-color: #E4941B;
+    color: white;
+    border: 5px solid white;
+    border-radius: 10px;
+    padding: 0.5rem;
     margin: 1rem;
 }
