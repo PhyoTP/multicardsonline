@@ -71,35 +71,38 @@ const PlayPage = () => {
                                 </option>
                             ))}
                         </select>
-                        <div>
-                            <label>Choose Question Sides:</label><br />
-                            <select
-                                multiple
-                                value={questionSides}
-                                onChange={onQuestionSidesChange}
-                            >
-                                {keys.map((key, index) => (
-                                    <option key={index} value={key}>
-                                        {key}
-                                    </option>
-                                ))}
-                            </select>
-                        </div>
-                        <div>
-                            <label>Choose Answer Sides:</label><br />
-                            <select
-                                multiple
-                                value={answerSides}
-                                onChange={onAnswerSidesChange}
-                            >
-                                {keys.map((key, index) => (
-                                    <option key={index} value={key}>
-                                        {key}
-                                    </option>
-                                ))}
-                            </select>
-                        </div>
-                        <caption>Hold Ctrl or Cmd to select more than one</caption>
+                        <section style={{display: "flex", flexDirection: "row"}}>
+                            <div>
+                                <label>Choose Question Sides:</label><br />
+                                <select
+                                    multiple
+                                    value={questionSides}
+                                    onChange={onQuestionSidesChange}
+                                >
+                                    {keys.map((key, index) => (
+                                        <option key={index} value={key}>
+                                            {key}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+                            <hr style={{margin: "1vw"}}></hr>
+                            <div>
+                                <label>Choose Answer Sides:</label><br />
+                                <select
+                                    multiple
+                                    value={answerSides}
+                                    onChange={onAnswerSidesChange}
+                                >
+                                    {keys.map((key, index) => (
+                                        <option key={index} value={key}>
+                                            {key}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+                        </section>
+                        <footer>Hold Ctrl or Cmd to select more than one</footer>
                     </div>
                     {mode === "Flashcards" && (
                         <Flashcards

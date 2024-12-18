@@ -31,7 +31,9 @@ h1{
 body{
     background-color: #3B2400;
 }
-
+footer{
+    font-size: 80%;
+}
 a{
     text-decoration: none;
     display: flex;
@@ -116,7 +118,7 @@ header{
 nav{
     display: flex;
     justify-content: space-evenly;
-    width:20vw;
+    flex-wrap: wrap;
 }
 nav a{
     background-color: #E4941B;
@@ -125,6 +127,7 @@ nav a{
     border-radius: 10px;
     border: 5px solid white;
     transition: all 0.5s;
+    margin-right: 0.5rem;
 }
 nav a:hover{
     color: #E4941B;
@@ -162,4 +165,31 @@ select{
     border-radius: 10px;
     padding: 0.5rem;
     margin: 1rem;
+}
+#spin {
+    width: 80vmin;
+    height: 80vmin;
+    animation: spin 20s linear infinite;
+    transition: all 1s ease-in-out;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#spin:hover {
+    width: 90vmin;
+    height: 90vmin;
+}
+
+#spinSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
 }

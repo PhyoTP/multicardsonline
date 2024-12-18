@@ -41,12 +41,16 @@ const Layout = () => {
         <h1 style={{display: "inline"}}>Multicards</h1>
       </Link>
       <span className="spacer"></span>
-      {jwt==="" ? (
+      
         <nav>
-          <a href="https://auth.phyotp.dev/#/login/multicards">Login</a>
-          <a href="https://auth.phyotp.dev/#/register/multicards">Register</a>
+          <Link to="/about">About</Link>
+          {jwt==="" ? (
+            <>
+              <a href="https://auth.phyotp.dev/#/login/multicards">Login</a>
+              <a href="https://auth.phyotp.dev/#/register/multicards">Register</a>
+            </>
+          ) : (<div />)}
         </nav>
-      ) : (<div />)}
     </header>
     
     {/*<Sidebar />*/}

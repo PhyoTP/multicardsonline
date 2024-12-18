@@ -30,7 +30,7 @@ const StyledWrapper = styled.div`
   align-items: center;
   justify-content: center;
   background: #E4941B;
-  border-radius: 10px;
+  border-radius: 3vmin;
   overflow: hidden;
   cursor: pointer;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
@@ -43,7 +43,7 @@ const StyledWrapper = styled.div`
   outline: none;
   caret-color: rgb(255, 81, 0);
   background-color: rgb(255, 255, 255);
-  border-radius: 10px;
+  border-radius: 2vmin;
   padding-left: 15px;
   letter-spacing: 0.8px;
   color: rgb(19, 19, 19);
