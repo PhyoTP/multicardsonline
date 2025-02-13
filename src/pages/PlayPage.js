@@ -24,6 +24,7 @@ const PlayPage = () => {
     const onOptionChangeHandler = (event) => {
         setMode(event.target.value);
         console.log("User Selected Value - ", event.target.value);
+        console.log(cards)
     };
 
     // Handle loading and error states
@@ -104,13 +105,15 @@ const PlayPage = () => {
                         </section>
                         <footer>Hold Ctrl or Cmd to select more than one</footer>
                     </div>
-                    {mode === "Flashcards" && (
-                        <Flashcards
-                            cards={cards}
-                            questionSides={questionSides}
-                            answerSides={answerSides}
-                        />
+                    {questionSides.length > 0 && answerSides.length > 0 && (
+                        <>
+                            {mode === "Flashcards" && (
+                                <Flashcards cards={cards} questionSides={questionSides} answerSides={answerSides} />
+                            )}
+                            {/* Add more modes here */}
+                        </>
                     )}
+
                 </div>
             )}
         </div>

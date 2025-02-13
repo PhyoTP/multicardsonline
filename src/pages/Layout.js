@@ -1,7 +1,7 @@
 import { Outlet, Link } from "react-router-dom";
 import "./styles.css";
 //import { useState } from "react";
-import {ReactComponent as Icon} from "./icon.svg";
+import {ReactComponent as Icon} from "../assets/icon.svg";
 import { jwt } from "./PhyoID";
 
 const Layout = () => {
@@ -56,6 +56,13 @@ const Layout = () => {
     {/*<Sidebar />*/}
     <div style={{height: "15vh"}}></div>
     <Outlet />
+    <hr/>
+    {window.innerHeight > window.innerWidth ? (
+      <footer>
+        <h1>Have a better experience in the Multicards app!</h1>
+        <nav><a href="https://apps.apple.com/us/app/multicards/id6739235177">Try now</a></nav>
+      </footer>
+    ) : (<></>)}
     </>
   )
 };

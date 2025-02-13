@@ -18,8 +18,7 @@ const Home = () => {
   }
 
   const filteredData = data.filter((item) =>
-    item.name.toLowerCase().includes(query.toLowerCase()) || 
-    item.creator.toLowerCase().includes(query.toLowerCase())
+    item.name.toLowerCase().includes(query.toLowerCase())
   );
   return (
     <>
@@ -29,7 +28,7 @@ const Home = () => {
         filteredData.map((item) => (
           <Link to={`/set/${item.id}`} key={item.id} className="stuff">
             <h3>{item.name}</h3>
-            <p>By {item.creator}</p>
+            <p>By {item.creator || "Deleted User"}</p>
           </Link>
         ))
       }

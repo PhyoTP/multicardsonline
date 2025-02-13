@@ -28,7 +28,7 @@ const SetPage = () => {
         <div>
           <div key={data.id} className="stuff">
             <h3>{data.name || "No name provided"}</h3>
-            <p>By {data.creator || "Unknown creator"}</p>
+            <p>By {data.creator || "Deleted User"}</p>
             <PlayButton id={data.id}/>
           </div>
           <table className="stuff">

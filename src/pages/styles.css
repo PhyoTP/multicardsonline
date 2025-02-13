@@ -1,18 +1,18 @@
 @font-face {
     font-family: 'AvenirMedium';
-    src: url('AvenirMedium.ttf') format('woff2');
+    src: url('../assets/AvenirNextRoundedStd-Med.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'AvenirDemi';
-    src: url('AvenirNextRoundedStd-Demi.woff2') format('woff2');
+    src: url('../assets/AvenirNextRoundedStd-Demi.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'AvenirBold';
-    src: url('AvenirNextRoundedStd-Bold.woff2') format('woff2');
+    src: url('../assets/AvenirNextRoundedStd-Bold.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -193,3 +193,32 @@ select{
     align-items: center;
     height: 85vh;
 }
+footer {
+    background-color: #E4941B;
+    border-radius: 10px;
+    padding:1vmin;
+    padding-left: 3vmin;
+    padding-right: 3vmin;
+    text-decoration: none;  /* To remove the underline */
+    color: white;  /* Change text color */
+    display: flex;  /* Ensures padding and background apply */
+    margin: 3vh;
+    text-align: left;
+    flex-direction:column;
+}
+#stack {
+    margin-inline: auto;
+    max-width: fit-content;
+    position: relative; /* Ensure it acts as a reference for absolute positioning */
+}
+
+#stack button {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, 10%); /* Centers the button horizontally */
+}
+
+
+
+  

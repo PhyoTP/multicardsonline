@@ -1,4 +1,4 @@
-import {ReactComponent as Icon} from "./Group 2.svg";
+import {ReactComponent as Icon} from "../assets/Group 2.svg";
 import { Link } from "react-router-dom";
 
 const About = () => {
@@ -20,10 +20,10 @@ const About = () => {
             <section className="stuff">
                 <p>Explore sets made by other users and choose to make your sets public or private.</p>
             </section>
-            <section className="stuff">
+            <nav className="stuff">
                 <Link to="/"><h2>Try Multicards today!</h2></Link>
-                <p>Coming soon to the App Store</p>
-            </section>
+                <a href="https://apps.apple.com/us/app/multicards/id6739235177">Now on the App Store!</a>
+            </nav>
         </main>
     )
 }
