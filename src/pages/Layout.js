@@ -40,7 +40,7 @@ const Layout = () => {
         <Icon id="icon"/>
         <h1 style={{display: "inline"}}>Multicards</h1>
       </Link>
-      <span className="spacer"></span>
+      <span className="spacer"/>
       
         <nav>
           <Link to="/about">About</Link>
@@ -55,14 +55,13 @@ const Layout = () => {
     
     {/*<Sidebar />*/}
     <div style={{height: "15vh"}}></div>
-    <Outlet />
-    <hr/>
-    {window.innerHeight > window.innerWidth ? (
+    {window.innerHeight > window.innerWidth &&
       <footer>
         <h1>Have a better experience in the Multicards app!</h1>
         <nav><a href="https://apps.apple.com/us/app/multicards/id6739235177">Try now</a></nav>
       </footer>
-    ) : (<></>)}
+    }
+    <Outlet />
     </>
   )
 };

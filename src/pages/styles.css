@@ -22,7 +22,7 @@ html, a{
 html, a{
     font-family: AvenirMedium;
 }
-h2, select{
+h2, select, button{
     font-family:AvenirDemi;
 }
 h1{
@@ -203,22 +203,45 @@ footer {
     color: white;  /* Change text color */
     display: flex;  /* Ensures padding and background apply */
     margin: 3vh;
-    text-align: left;
+    text-align: center;
     flex-direction:column;
 }
 #stack {
     margin-inline: auto;
     max-width: fit-content;
     position: relative; /* Ensure it acts as a reference for absolute positioning */
+    bottom: 15%;
 }
 
-#stack button {
+#stack .flip-card {
     position: absolute;
     left: 50%;
     top: 10%;
     transform: translate(-50%, 10%); /* Centers the button horizontally */
 }
 
+#flashcards{
+    display: flex;
+    flex-direction: row;
+}
 
+.flashcard-buttons {
+    border: none;
+    width: 10vw;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+#know{
+    background-color: limegreen;
+}
+#dunno{
+    background-color: red;
+}
 
-  
+#flashcards-undo{
+    border: none;
+    background: none;
+    color: white;
+    font-size: 150%;
+    cursor: pointer;
+}

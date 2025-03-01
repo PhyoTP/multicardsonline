@@ -17,8 +17,8 @@ const PlayPage = () => {
 
     const options = [
         "Flashcards",
-        "Match",
-        "Write"
+        //"Match",
+        //"Write"
     ];
 
     const onOptionChangeHandler = (event) => {
