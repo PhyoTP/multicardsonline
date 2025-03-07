@@ -7,7 +7,7 @@ const Flashcards = ({ cards, questionSides, answerSides }) => {
   const [allCards, setAllCards] = useState([...cards]);
   const [doneCards, setDoneCards] = useState([]);
   const resetHeightRef = useRef(false); // Ref to track when to reset height
-
+  const [knowCards, setKnowCards] = useState([]);
   // Handle the empty stack condition
   useEffect(() => {
     if (allCards.length === 0) {
@@ -18,17 +18,24 @@ const Flashcards = ({ cards, questionSides, answerSides }) => {
       
       if (dunnoCards.length === 0) {
         // All cards known
-        const restart = window.confirm("Do you want to restart?");
+        const restart = window.confirm(
+`You got ${knowCards.length} out of ${cards.length}! 
+Do you want to restart?`
+        );
         if (restart) {
           setAllCards(cards);
           setDoneCards([]);
+          setKnowCards([]);
         } else {
           window.location.reload();
         }
       } else {
         // Some cards unknown
         console.log("Restarting");
-        const restartWithUnknown = window.confirm("Do you want to restart with unknown cards?");
+        const restartWithUnknown = window.confirm(
+`You got ${knowCards.length} out of ${cards.length}! 
+Do you want to restart with unknown cards?`
+        );
         if (restartWithUnknown) {
           setAllCards([...dunnoCards]);
           setDunnoCards([]);
@@ -37,6 +44,7 @@ const Flashcards = ({ cards, questionSides, answerSides }) => {
           setAllCards(cards);
           setDoneCards([]);
           setDunnoCards([]);
+          setKnowCards([]);
         }
       }
     }
@@ -60,6 +68,8 @@ const Flashcards = ({ cards, questionSides, answerSides }) => {
     
     if (!know) {
       setDunnoCards((prevCards) => [...prevCards, newElement]);
+    }else{
+      setKnowCards((prevCards) => [...prevCards, newElement]);
     }
     
     setDoneCards((prevCards) => [...prevCards, [newElement, know]]);
@@ -75,6 +85,8 @@ const Flashcards = ({ cards, questionSides, answerSides }) => {
     
     if (!lastElement[1]) {
       setDunnoCards((prevCards) => prevCards.slice(0, -1));
+    }else{
+      setKnowCards((prevCards) => prevCards.slice(0,-1));
     }
     
     setAllCards((prevCards) => [...prevCards, lastElement[0]]);
