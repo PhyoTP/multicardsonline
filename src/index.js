@@ -6,6 +6,7 @@ import NoPage from "./pages/NoPage";
 import SetPage from "./pages/SetPage";
 import PlayPage from "./pages/PlayPage";
 import About from "./pages/About";
+import Library from "./pages/Library";
 export default function App() {
   return (
     <Router>
@@ -16,6 +17,7 @@ export default function App() {
           <Route path="set/:id/play" element={<PlayPage />} />
           <Route path="about" element={<About />} />
           <Route path="*" element={<NoPage />} />
+          <Route path="library" element={<Library />} />
         </Route>
       </Routes>
     </Router>

@@ -24,14 +24,16 @@ const Home = () => {
     <>
       <h2>Home</h2>
       <Search query={query} onSearch={searchNew} />
+      <main id="feed">
       {data && 
         filteredData.map((item) => (
-          <Link to={`/set/${item.id}`} key={item.id} className="stuff">
+          <Link to={`/set/${item.id}`} key={item.id} className="square">
             <h3>{item.name}</h3>
             <p>By {item.creator || "Deleted User"}</p>
           </Link>
         ))
       }
+      </main>
     </>
   );
 };

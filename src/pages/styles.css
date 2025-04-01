@@ -245,3 +245,27 @@ footer {
     font-size: 150%;
     cursor: pointer;
 }
+.square {
+    background-color: #E4941B;
+    border-radius: 10px;
+    text-decoration: none;  /* To remove the underline */
+    color: white;  /* Change text color */
+    display: flex;  /* Ensures padding and background apply */
+    margin: 5vmin;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    width: 40vmin; /* Set a fixed width */
+    height: 40vmin; /* Set the height equal to the width */
+    justify-content: center; /* Center content vertically */
+    box-shadow: 5px 10px #fff;
+    transition: all 0.5s;
+}
+#feed{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5vmin;
+}
+.square:hover{
+    box-shadow: -5px 10px #fff;
+}

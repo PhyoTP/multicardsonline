@@ -49,7 +49,11 @@ const Layout = () => {
               <a href="https://auth.phyotp.dev/#/login/multicards">Login</a>
               <a href="https://auth.phyotp.dev/#/register/multicards">Register</a>
             </>
-          ) : (<div />)}
+          ) : (
+            <>
+              <Link to="/library">Library</Link>
+            </>
+          )}
         </nav>
     </header>
     
