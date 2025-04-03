@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.bd670704.css",
-    "main.js": "/static/js/main.8b03189f.js",
+    "main.js": "/static/js/main.c20725ba.js",
     "static/media/AvenirNextRoundedStd-Bold.woff2": "/static/media/AvenirNextRoundedStd-Bold.efac21793c94ba7ef71c.woff2",
     "static/media/AvenirNextRoundedStd-Med.woff2": "/static/media/AvenirNextRoundedStd-Med.147fac13421f981d0b19.woff2",
     "static/media/AvenirNextRoundedStd-Demi.woff2": "/static/media/AvenirNextRoundedStd-Demi.7c68ce948afc00ab710c.woff2",
@@ -9,10 +9,10 @@
     "index.html": "/index.html",
     "static/media/Group 2.svg": "/static/media/Group 2.311675a27079e677d674b33a4d97dc86.svg",
     "main.bd670704.css.map": "/static/css/main.bd670704.css.map",
-    "main.8b03189f.js.map": "/static/js/main.8b03189f.js.map"
+    "main.c20725ba.js.map": "/static/js/main.c20725ba.js.map"
   },
   "entrypoints": [
     "static/css/main.bd670704.css",
-    "static/js/main.8b03189f.js"
+    "static/js/main.c20725ba.js"
   ]
 }
