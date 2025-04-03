@@ -2,15 +2,19 @@ import { useParams } from "react-router-dom";
 import useFetch from "./useFetch";
 import Loader from "./Loader";
 import Error from "./Error";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Flashcards from "./Flashcards";
+import { jwt } from "./PhyoID";
 
 const PlayPage = () => {
     const { id } = useParams();
+    const [secureData, setSecureData] = useState(null);
+    const [secureLoading, setSecureLoading] = useState(false);
+    const [secureError, setSecureError] = useState(null);
+
     const { data, loading, error } = useFetch(`https://api.phyotp.dev/multicards/set/${id}`);
 
     // Move all hooks to the top level to avoid conditional hook issues
-    const cards = data?.cards || [];
     const [mode, setMode] = useState("");
     const [questionSides, setQuestionSides] = useState([]);
     const [answerSides, setAnswerSides] = useState([]);
@@ -21,21 +25,35 @@ const PlayPage = () => {
         //"Write"
     ];
 
-    const onOptionChangeHandler = (event) => {
-        setMode(event.target.value);
-        console.log("User Selected Value - ", event.target.value);
-        console.log(cards)
-    };
 
-    // Handle loading and error states
-    if (loading) {
-        return <Loader />;
-    }
-
-    if (error) {
-        return <Error error={error} />;
-    }
-
+    useEffect(() => {
+        if (error && jwt) {
+            console.log("Fetching user sets...");
+            setSecureLoading(true);
+            fetch(`https://api.phyotp.dev/phyoid/userdata/sets`, {
+                headers: { Authorization: `Bearer ${jwt}` },
+            })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log("Fetched user sets:", data);
+                setSecureData(data);
+            })
+            .catch((err) => {
+                console.error("Error fetching user sets:", err);
+                setSecureError(err);
+            })
+            .finally(() => setSecureLoading(false));
+        }
+    }, [error, id]);
+    
+    
+      if (loading || secureLoading) return <Loader />;
+      if (error && !secureData) return <Error error={error} />;
+      if (secureError) return <Error error={secureError} />;
+    
+      const finalData = secureData.filter((set) => set.id === id)[0] || data.filter((set) => set.id === id)[0];
+      const cards = finalData?.cards || [];
+    console.log(cards)
     // Extract unique keys from card sides
     let keys = [];
     for (let card of cards) {
@@ -45,7 +63,11 @@ const PlayPage = () => {
             }
         }
     }
-
+    const onOptionChangeHandler = (event) => {
+        setMode(event.target.value);
+        console.log("User Selected Value - ", event.target.value);
+        console.log(cards)
+    };
     const onQuestionSidesChange = (event) => {
         const selectedOptions = Array.from(event.target.selectedOptions, option => option.value);
         setQuestionSides(selectedOptions);
@@ -60,7 +82,7 @@ const PlayPage = () => {
 
     return (
         <div>
-            {data && (
+            {finalData ? (
                 <div>
                     <h2>Play</h2>
                     <div className="stuff">
@@ -115,7 +137,7 @@ const PlayPage = () => {
                     )}
 
                 </div>
-            )}
+            ) : <Error error="Unknown"/>}
         </div>
     );
 };
