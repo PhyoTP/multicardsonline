@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import useFetch from "./useFetch";
 import Loader from "./Loader";
 import Error from "./Error";
@@ -32,7 +32,7 @@ const SetPage = () => {
   if (error && !secureData) return <Error error={error} />;
   if (secureError) return <Error error={secureError} />;
 
-  const finalData = secureData.filter((set) => set.id === id)[0] || data.filter((set) => set.id === id)[0];
+  const finalData = secureData?.filter((set) => set.id === id)[0] || data;
   const cards = finalData?.cards || [];
   return (
     <div>
@@ -40,7 +40,7 @@ const SetPage = () => {
         <div>
           <div key={finalData.id} className="stuff">
             <h3>{finalData.name || "No name provided"}</h3>
-            <p>By {finalData.creator || "Deleted User"}</p>
+            <nav><Link to={`/user/${finalData.creator}`}>By {finalData.creator || "Deleted User"}</Link></nav>
             <PlayButton id={finalData.id} />
           </div>
           <table className="stuff">
