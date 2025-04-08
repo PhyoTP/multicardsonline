@@ -40,6 +40,7 @@ const SetPage = () => {
         <div>
           <div key={finalData.id} className="stuff">
             <h3>{finalData.name || "No name provided"}</h3>
+            {finalData.cardCount && <p>{finalData.cardCount} terms</p>}
             <nav><Link to={`/user/${finalData.creator}`}>By {finalData.creator || "Deleted User"}</Link></nav>
             <PlayButton id={finalData.id} />
           </div>

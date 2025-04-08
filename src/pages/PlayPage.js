@@ -51,7 +51,7 @@ const PlayPage = () => {
       if (error && !secureData) return <Error error={error} />;
       if (secureError) return <Error error={secureError} />;
     
-      const finalData = secureData.filter((set) => set.id === id)[0] || data.filter((set) => set.id === id)[0];
+      const finalData = secureData?.filter((set) => set.id === id)[0] || data;
       const cards = finalData?.cards || [];
     console.log(cards)
     // Extract unique keys from card sides

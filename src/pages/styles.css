@@ -261,7 +261,7 @@ footer {
     box-shadow: 5px 10px #fff;
     transition: all 0.5s;
 }
-#feed{
+.feed{
     display: flex;
     flex-wrap: wrap;
     margin: 5vmin;
